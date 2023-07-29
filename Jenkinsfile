@@ -24,7 +24,6 @@ pipeline {
         stage('Deploy') {
             steps {
                 sh './jenkins/scripts/deliver.sh'
-                sh 'echo "waiting for 1 minute before finish the process."'
                 sh 'sleep 1m'
                 sh './jenkins/scripts/kill.sh'
             }
